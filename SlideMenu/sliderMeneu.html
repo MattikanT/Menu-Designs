@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Slideer Mwnu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        .header{
+            width: 100%;
+            height: 100vh;
+            background-image: url(images/background.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .side-nav{
+            border: 1px solid #000;
+            width: 110px;
+            height: 100%;
+            position: fixed;
+            top:0 ;
+            left: 0;
+            padding: 30px 15px;
+            background: rgba(225,225,225,0.2);
+            backdrop-filter: blur(5px); /*I don't see the differnt here*/
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            transition: width 0.5s;
+        }
+        .user{
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 60px;
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+        .user div{
+            display: none;
+        }
+        .user h2{
+            font-size: 15px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .user-img{
+            width: 40px;
+            border-radius: 50%;
+            margin: auto;
+
+        }
+        .star-img{
+            width: 20px;
+            display: none;
+        }
+        ul{
+            list-style: none;
+            padding: 0 15px;
+        }
+        ul li{
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+        }
+        ul li img{
+            width: 30px;
+            margin-right: 0px;
+
+        }
+         ul li p{
+            white-space: nowrap;
+            display: none;
+         }
+         .side-nav:hover{
+            width: 250px;
+
+         }
+         .side-nav:hover .user div{
+            display: block;
+         }
+         .side-nav:hover .user{
+            width: 100%;
+            background: rgba(225,225,225,0.2);
+            backdrop-filter: blur(5px);
+         }
+         .side-nav:hover .star-img{
+            display: block;
+         }
+         .side-nav:hover .user-img{
+            margin: 0;
+         }
+         .side-nav:hover ul li p{
+            display: block;
+         }
+         .side-nav:hover ul li img{
+            margin-right: 10px;
+         }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="side-nav">
+            <div class="user">
+                <img src="images/profile.jpg" alt="" class="user-img">
+                <div>
+                    <h2>Mattikan Tongsai</h2>
+                    <p>mattikan@gmail.com</p>
+                </div>
+                <img src="images/star.png" alt="" class="star-img">
+            </div>
+            <ul>
+                <li><img src="images/dashboard.png" alt=""><p>Dashboard</p> </li>
+                <li><img src="images/reports.png" alt=""><p>Reports</p></li>
+                <li><img src="images/rewards.png" alt=""> <p>Rewards</p> </li>
+                <li><img src="images/messages.png" alt=""><p>Messages</p></li>
+                <li><img src="images/video-chat.png" alt=""><p> Video Chat</p></li>
+                <li><img src="images/projects.png" alt=""><p>Our Projects</p></li>
+                <li><img src="images/members.png" alt=""><p>Core Members</p></li>
+                <li><img src="images/setting.png" alt=""><p>Settings</p></li>
+            </ul>
+            <ul>
+                <li><img src="images/logout.png" alt=""><p>Logout</p></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
